@@ -1,0 +1,370 @@
+
+*{
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+}
+body{
+    margin:0;
+}
+img{
+    width:30%;
+    height:40%;
+}
+h1{
+    font-size:2.5rem;
+    text-align:center;
+}
+h2{
+    font-size:1.5rem;
+    text-align: center;
+}
+a{
+    color:white;
+    font-size:1.2rem;
+    text-decoration: none;
+}
+p{
+    font-size:1.2rem;
+    text-align:justify;
+}
+.dotted-hr{
+    border:dotted 6px white;
+    border-bottom:none;
+    margin:20px auto;
+    width:70px;
+    
+}
+[class*="col-"]{
+    float:left;
+    padding:10px;
+}
+/* for mobile*/
+[class*="col-"]{
+    width:100%;
+}
+
+/* navber design start here */
+.navber{
+    background-color:#0c6168;
+    padding:1% 7%;
+    text-align:center;
+    
+
+}
+.navber h1{
+    color:White;
+    margin:0;
+    padding-top:10px;
+}
+.navber-menu{
+    display:flex;
+    flex-direction:column ;
+    text-transform:uppercase;
+
+}
+.navber-menu a{
+    background-color:#0c6168;
+    border-radius: 10px;
+    margin:7px 0px;
+    padding: 10px;
+}
+.navber-menu a:hover{
+    background-color:gray;
+
+}
+.navber::after{
+    content:'';
+    display:table;
+    clear:both;
+}
+/* navber desing end here */
+/* profile design start from here */
+.profile{
+    padding:130px 10px;
+    position:relative;
+    text-align:center;
+}
+
+.profile .top-weather-icon{
+    position:absolute;
+    right:60px;
+    top:20px;
+    transition:transform 2s;
+    height:8%;
+    width:5%;
+}
+.profile .top-weather-icon:hover{
+    transform:rotate(360deg);
+}
+.profile-desc h1{
+    font-family: 'Satisfy', cursive;
+    font-size:3rem;
+}
+.profile-desc p{
+    color:gray;
+    text-align:center;
+    width:90%;
+    margin:0 auto 20px auto;
+}
+.profile .bottom-weather-icon{
+    position:absolute;
+    left:60px;
+    bottom:10px;
+    transition:transform 2s;
+    height:8%;
+    width:5%;
+}
+.profile .bottom-weather-icon:hover{
+    transform:rotate(360deg);
+}
+.profile::after{
+    content:'';
+    display:table;
+    clear:both;
+
+}
+/* profile end here */
+/* about me starts here */
+.about-me{
+    background-color:#39a4ac;
+    padding:1% 7%;
+    color:white;
+    text-align:center;
+    font-family: 'Montserrat', sans-serif;
+}
+.aboutme-image img{
+    border:5px solid white;
+    border-radius:50%;
+    height:220px;
+    width:200px;
+}
+.about-me p{
+    text-align:center;
+}
+.about-me a{
+    font-size:1.2rem;
+}
+.cv-button{
+    background-color:#052d2f;
+    color:white;
+    border-radius: 12px;
+    padding:15px;
+    font-size:1rem;
+    cursor: pointer;
+    text-align: center;
+    margin:10px;
+}
+
+.about-me::after{
+    clear:both;
+    display:table;
+    content:'';
+}
+/* about me ends here */
+/* professional-experience starts here */
+.professional-experience{
+    padding:1% 0%;
+}
+.professional-experience .card{
+    background-color:#a39e9e;
+    border-radius:5px;
+    padding:10px;
+    transition:0.3s;
+    height:700px;
+}
+.card-icon{
+    text-align:center;
+}
+.card-icon img{
+    margin-top:20px;
+    width:120px;
+}
+.rounded-img{
+    border:5px solid white;
+    border-radius: 50%;
+    padding:15px;
+}
+.card-title h2{
+    background-color:#616161;
+    color:white;
+    padding:10px;
+    text-align:center;
+}
+.skills-container{
+    padding-right:45px;
+}
+.skills-container li{
+    list-style:none;
+    font-weight:bolder;
+    margin:30px 10px;
+    position:relative;
+    text-transform:Uppercase;
+
+}
+.skills-container li::before{
+    content:'';
+    position:absolute;
+    top: calc(100% + 5px);
+
+    width:100%;
+    height:10px;
+    background-color:rgb(86,86,153,.5);
+    border-radius:1000px;
+}
+.skills-container li::after{
+    content:'';
+    position:absolute;
+    top: calc(100% + 5px);
+    left:0;
+
+    width:0;
+    height:10px;
+    background-color:rgb(86,86,153,1);
+    border-radius:1000px;
+
+    animation-duration:3s;
+    animation-delay:2s;
+    animation-timing-function: linear;
+    animation-fill-mode:forwards;
+    animation-iteration-count:infinite;
+
+}
+.skills-container li.html::after{
+    animation-name: html;
+}
+
+@keyframes html{
+    to{
+        width: 90%;
+    }
+}
+.skills-container li.css::after{
+    animation-name: css;
+}
+@keyframes css{
+    to{
+        width:70%;
+    }
+}
+.skills-container li.js::after{
+    animation-name: js;
+}
+
+@keyframes js{
+    to{
+        width: 40%;
+    }
+}
+.skills-container li.bootstarp::after{
+    animation-name: bootstarp;
+}
+
+@keyframes bootstarp{
+    to{
+        width: 50%;
+    }
+}
+.skills-container li.jquery::after{
+    animation-name: jquery;
+}
+
+@keyframes jquery{
+    to{
+        width: 60%;
+    }
+}
+.skills-container li.git::after{
+    animation-name: git;
+}
+
+@keyframes git{
+    to{
+        width: 90%;
+    }
+}
+
+ .card:hover{
+    box-shadow: 0 4px 8px 5px black;
+}
+
+.professional-experience::after{
+    clear:both;
+    display:table;
+    content:'';
+}
+.contact{
+    padding:1% 7%;
+    background-color:#39A4AC;
+    color:white;
+}
+.contact-me{
+    text-align:center;
+}
+.contact-me input,textarea{
+    width:100%;
+    padding:10px;
+    font-size:1rem;
+    text-align:center;
+    border:none;
+    border-radius:5px;
+    resize:none;
+}
+.contact button{
+    border:none;
+    border-radius:12px;
+    background-color:#052d2f;
+    color:white;
+    cursor:pointer;
+    padding:15px;
+    margin:10px;
+    width:100px;
+
+}
+.more{
+    text-align: center;
+    
+}
+.media-button .btn{
+    background-color: white;
+    border:none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size:32px;
+    padding:5px;
+    margin:10px;
+    width:50px;
+
+}
+.btn:hover{
+    background-color: gray;
+}
+
+
+.contact::after{
+    clear:both;
+    display:table;
+    content:'';
+}
+/* professional-experience ends here */
+/* footer starts here */
+.footer{
+    background-color:black;
+    color:white;
+    padding:20px;
+    text-align:center;
+    font-size:1rem;
+}
+.footer-menu a{
+    display:block;
+    margin:15px 0px;
+}
+.footer:hover{
+    color:grey;
+    
+}
+.footer::after{
+    display:table;
+    content:'';
+    clear:both;
+}
+/* footer ends here */
